@@ -1,0 +1,202 @@
+@charset "UTF-8";
+@import "https://unpkg.com/ress/dist/ress.min.css";
+@import url(reset.css);
+@import url("http://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
+@import url("https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css");
+
+/**********************************
+
+    general
+
+**********************************/
+
+/* レイアウトのためのCSS */
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-family: "MS 明朝";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans Japanese', sans-serif;
+    background-color: #494949;
+}
+
+/**********************************
+
+    Layout
+
+**********************************/
+
+header {
+    width: 100%;
+    min-width: 1024px;
+}
+
+
+/**********************************
+
+    Common
+
+**********************************/
+
+a {
+    color: #d3d3d3;
+    text-decoration: none;
+}
+
+nav a:hover,
+.foot-nav a:hover {
+    text-decoration: underline;
+}
+
+header table a:not(.site-name),
+.link-btn,
+form button,
+.sns a {
+    transition: .2s all;
+}
+
+header table a:not(.site-name):hover,
+.link-btn:hover,
+form button:hover,
+.sns a:hover {
+    background: #212121;
+    color: #fff;
+}
+
+/**********************************
+
+    header
+
+**********************************/
+
+header {
+    width: 100%;
+    min-width: 1024px;
+}
+
+header nav {
+    border-bottom: 2px solid #fff;
+    padding: 1em 0;
+    background: #0f0f0f;
+    text-align: center;
+}
+
+header nav a {
+    display: inline-flex;
+}
+
+header nav a + a {
+    margin-left: 2em;
+}
+
+header table {
+    width: 90%;
+    margin: 20px auto;
+}
+
+header table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+header table tr:nth-of-type(1) td {
+    border-bottom: 2px solid #fff;
+}
+
+header table tr:nth-of-type(1) td[rowspan="2"] {
+    border-right: 2px solid #fff;
+    border-bottom: none;
+    border-left: 2px solid #fff;
+}
+
+header a{
+    display: block;
+    padding: .5em;
+}
+
+header h1 a {
+    display: inline-block;
+    font-size: 40px;
+}
+
+/***************************************************************/
+
+
+/**********************************/
+/* アコーディオンのためのCSS */
+/* アコーディオン全体 */
+/**********************************/
+
+.accordion-area {
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.accordion-area li {
+    margin: 10px 0;
+}
+
+.accordion-area section {
+    border: 1px solid #ccc;
+}
+
+/* アコーディオンタイトル */
+.title {
+    /* +マークの位置基準とするためrelative設定 */
+    position: relative;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all 0.5s ease;
+}
+
+/* アイコンの+と× */
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+}
+
+.title::before {
+    top: 48%;
+    left: 15px;
+    transform: rotate(0deg);
+}
+
+.title::after {
+    top: 48%;
+    left: 15px;
+    transform: rotate(90deg);
+}
+
+/* closeというクラスが付いたら形状変化 */
+.title.close::before {
+    transform: rotate(45deg);
+}
+
+.title.close::after {
+    transform: rotate(-45deg);
+}
+
+/* アコーディオンで現れるエリア */
+.box {
+    /* 始めは非表示 */
+    display: none;
+    background: #999999;
+    color: #171717;
+    margin: 0 3% 3% 3%;
+    padding: 3%;
+}

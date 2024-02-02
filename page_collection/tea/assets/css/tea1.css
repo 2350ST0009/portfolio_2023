@@ -1,0 +1,101 @@
+@charset "UTF-8";
+@import "https://unpkg.com/ress/dist/ress.min.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333; /*文字色*/
+}
+
+.inner {
+  width: 1000px; /* 幅1000px */
+  margin:auto; /* 中央寄せ */
+}
+
+header {
+  background: url(../img/bg_kodawari.jpg) center/cover no-repeat; /* 背景 */
+  font-size: 26px;
+  padding-left: 14em;
+  position: bottom;
+  color: #E0FFFF	; /* 文字色 */
+  height: 50vh; /* 高さ */
+  text-align: left;
+  display: flex; /* 子要素をフレックス */
+  flex-direction: column;
+  justify-content: center;
+}
+
+section {
+  width: 100%; /* 幅100％ */
+  padding: 80px 0; /* 内余白-上下80px */
+}
+
+section h2 {
+  margin-bottom: 1em; /* 外余白-下1em */
+}
+section p {
+  line-height: 1.8; /* 行高1.8文字分 */
+}
+
+#first {
+  width: 1000px; /* 幅1000px */
+  margin: auto; /* 中央寄せ */
+  display: flex; /* 子要素をフレックス */
+  background: url("../img/title_mv.jpg") left center no-repeat; /* 背景 */
+  font-size: 19px;
+}
+#first img {
+  width: 500px;
+}
+#first .inner {
+  width: 500px; /* 幅500px */
+  margin-right: 0; /* 外余白-右0 */
+  margin-left: auto; /* 外余白-左auto */
+}
+#first p {
+  margin: 1em 0;
+}
+
+#second {
+  font-size: 19px;
+}
+
+#second .inner,
+#third .inner {
+  text-align: center;
+}
+
+#second p{
+  margin-bottom: 3em; /* 外余白-下3em */
+}
+
+#second img{
+  width: 1000px;
+}
+#second {
+  background: #f4f4f4; /* 背景 */
+  padding-bottom: 0; /* 内余白-下0*/
+}
+#second .inner {
+  text-align: center;
+}
+
+#third {
+  font-size: 19px;
+}
+
+#third .last {
+  margin-bottom: 3em;
+}
+
+#third img {
+  width: 1000px;
+}
+
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 20px 0; /*　内余白-上下20px */
+}
